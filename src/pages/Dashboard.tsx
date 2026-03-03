@@ -254,9 +254,16 @@ export default function Dashboard() {
         if (!selectedFile) return
 
         setAnalyzing(true)
+        const startTime = Date.now()
 
         try {
             const data = await api.transactions.analyze(selectedFile)
+            // Ensure minimum 3 second loading time for better UX
+            const elapsed = Date.now() - startTime
+            const minDelay = 3000
+            if (elapsed < minDelay) {
+                await new Promise(resolve => setTimeout(resolve, minDelay - elapsed))
+            }
             if (data.error) {
                 console.error('Analysis failed', data.error)
             } else {
