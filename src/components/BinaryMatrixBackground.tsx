@@ -7,7 +7,7 @@ interface BinaryColumn {
   x: number
   y: number
   speed: number
-  direction: number // 1 for down, -1 for up
+  direction: number // 1 for down, -1
   opacity: number
   chars: string[]
   charIndex: number
