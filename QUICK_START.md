@@ -8,7 +8,7 @@ Your NexusGuard project is **fully set up and working**! 🎉
 
 ## 🏃 Get Started in 3 Steps
 
-### 1️⃣ Start the Development Server
+### 1️⃣ Start the Development Servers
 ```bash
 cd D:/NexusX
 npm run dev
